@@ -16,9 +16,8 @@ export default function StandardTopBar() {
   return (
     <div>
       <div
-        className={`w-full h-14 lg:h-16 flex items-center justify-between px-4 lg:px-8 transition duration-200
-        ${menu ? "-translate-y-full md:translate-y-0" : "translate-y-0"}
-      fixed bg-zinc-900`}
+        className={`w-full h-14 lg:h-16 fixed flex items-center justify-between px-4 lg:px-8 bg-zinc-900 border-b border-zinc-100/40 transition duration-200
+        ${menu ? "-translate-y-full md:translate-y-0" : "translate-y-0"}`}
       >
         <Link href="/" className="flex items-center space-x-2 lg:space-x-4">
           <img src="/only-special-logo.svg" alt="logo" className="w-6 lg:w-8" />
@@ -53,26 +52,26 @@ export default function StandardTopBar() {
             <h4 className="text-sm font-light">Slogan</h4>
           </div>
           <FaTimes
-            className="cursor-pointer w-8 h-8"
+            className="cursor-pointer w-8 h-8 hover:text-zinc-300 transition"
             onClick={() => setMenu(false)}
           />
         </div>
         <nav className="flex flex-col md:flex-row">
           <Link
             href="#"
-            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 md:border-0"
+            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 transition md:border-0"
           >
             Home
           </Link>
           <Link
             href="#"
-            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 md:border-0"
+            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 transition md:border-0"
           >
             Serviços
           </Link>
           <Link
             href="#"
-            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 md:border-0"
+            className="flex items-center text-xl font-semibold h-14 lg:h-16 px-4 border-b hover:bg-zinc-700 transition md:border-0"
           >
             Contato
           </Link>
